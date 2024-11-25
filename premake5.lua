@@ -19,6 +19,10 @@ project "ImGui"
         "imstb_textedit.h"
 
     }
+    defines
+    {
+        "IMGUI_API=__declspec(dllexport)"
+    }
     
 	filter "system:windows"
         buildoptions { "-std=c11", "-lgdi32" }
